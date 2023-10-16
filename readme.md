@@ -3,6 +3,7 @@
 ng-sf is a simple python script which imports job applications from NinjaGig and exports them to custom object in Salesforce
 
 ## Secrets File
+
 ng-sf requires a secrets file to be created in the same directory as the script. The file should be named secrets.json and use the following format:
 
     {
@@ -15,6 +16,7 @@ ng-sf requires a secrets file to be created in the same directory as the script.
     }
 
 ## Custom Object in Salesforce
+
     Your salesforce instance will need to have a custom object 'Application__c' created.
 
     This object will need the following custom fields:
@@ -46,10 +48,9 @@ ng-sf requires a secrets file to be created in the same directory as the script.
 
 This script was written for a specific use case and you should feel free to customize it to meet your needs.
 
-
 ## Contributing
 
-Pull requests are welcome. 
+Pull requests are welcome.
 
 ## License
 
