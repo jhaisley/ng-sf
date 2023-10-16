@@ -22,7 +22,6 @@ def get_secret(secret_name):
         ic("Error: ", e)
         
 
-
 def clean_c(text):
     if text is None:
         return ''
