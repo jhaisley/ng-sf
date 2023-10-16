@@ -15,32 +15,32 @@ ng-sf requires a secrets file to be created in the same directory as the script.
     }
 
 ## Custom Object in Salesforce
-Your salesforce instance will need to have a custom object 'Application__c' created.
+    Your salesforce instance will need to have a custom object 'Application__c' created.
 
-This object will need the following custom fields:
-Applicant_Name__c #Text
-App_Recieved__c #Date
-App_Status__c #Picklist
-Education__c #Text
-Email_Address__c #Email
-NGAppID__c #Text (External ID)
-NGAppSource__c #Text
-NGCity__c #Text
-NG_Additional_Info__c #Long Text Area
-NG_Custom_Questions__c #Long Text Area
-NG_DateRecieved__c #Date
-NG_Educational_Experience__c #Long Text Area
-NG_JobTitle__c #Text
-NG_Personal_References__c #Long Text Area
-NG_Resume_Link__c #URL
-NG_Salary_Period__c #Text
-NG_Salary__c #Number
-NG_Work_Experiences__c #Long Text Area
-NG__c #Text
-Phone_Number__c #Phone
-State__c #Text
-Street_Address__c #Text
-Years_Experience__c #Number
+    This object will need the following custom fields:
+    Applicant_Name__c #Text
+    App_Recieved__c #Date
+    App_Status__c #Picklist
+    Education__c #Text
+    Email_Address__c #Email
+    NGAppID__c #Text (External ID)
+    NGAppSource__c #Text
+    NGCity__c #Text
+    NG_Additional_Info__c #Long Text Area
+    NG_Custom_Questions__c #Long Text Area
+    NG_DateRecieved__c #Date
+    NG_Educational_Experience__c #Long Text Area
+    NG_JobTitle__c #Text
+    NG_Personal_References__c #Long Text Area
+    NG_Resume_Link__c #URL
+    NG_Salary_Period__c #Text
+    NG_Salary__c #Number
+    NG_Work_Experiences__c #Long Text Area
+    NG__c #Text
+    Phone_Number__c #Phone
+    State__c #Text
+    Street_Address__c #Text
+    Years_Experience__c #Number
 
 ## Customize Script
 
