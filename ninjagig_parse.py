@@ -1,4 +1,4 @@
-"""Import  datatime module    """
+"""Import modules."""
 import datetime
 import json
 import os
