@@ -2,3 +2,5 @@ secrets.json
 .vscode/launch.json
 .trunk/
 trunk.ps1
+data.json
+last.json
