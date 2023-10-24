@@ -93,7 +93,7 @@ if os.path.exists("data.json") and os.path.getsize("data.new") > os.path.getsize
 else:
     # Remove data.new if it exists
     ic(
-        "Data validity check failed, or no new data since last process, removing downloaded data"
+        "No new data since last process or data failed validity check, removing downloaded data"
     )
     if os.path.exists("data.new"):
         os.remove("data.new")
