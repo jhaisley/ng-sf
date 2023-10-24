@@ -61,8 +61,12 @@ if os.path.exists("data.new"):
     os.remove("data.new")
     ic("Removed data.new")
 
-# Download the JSON data from the URL
-response = requests.get(ngJson, timeout=10)
+# Download the JSON data from the URL, abort if anything goes wrong.
+try:
+    response = requests.get(ngJson, timeout=15)
+except requests.exceptions.RequestException as err:
+    ic("Error: ", err)
+    raise SystemExit(err)
 data = response.json()
 ic("Downloaded JSON data")
 
@@ -88,8 +92,6 @@ if os.path.exists("data.json") and os.path.getsize("data.new") > os.path.getsize
     ic("Renamed data.new to data.json")
 else:
     # Remove data.new if it exists
-    ic(
-        "Data validity check failed, or no new data since last process, removing downloaded data"
-    )
+    ic("Data validity check failed, or no new data since last process, removing downloaded data")
     if os.path.exists("data.new"):
         os.remove("data.new")
