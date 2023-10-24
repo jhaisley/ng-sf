@@ -62,7 +62,7 @@ if os.path.exists("data.new"):
     ic("Removed data.new")
 
 # Download the JSON data from the URL, abort if anything goes wrong.
-# Sometimes Ninjagig is slow to respond, so we set a timeout of 15 seconds. 
+# Sometimes Ninjagig is slow to respond, so we set a timeout of 15 seconds.
 try:
     response = requests.get(ngJson, timeout=15)
 except requests.exceptions.RequestException as err:
