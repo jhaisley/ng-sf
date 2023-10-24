@@ -92,8 +92,7 @@ if os.path.exists("data.json") and os.path.getsize("data.new") > os.path.getsize
     ic("Renamed data.new to data.json")
 else:
     # Remove data.new if it exists
-    ic(
-        "No new data since last process or data failed validity check, removing downloaded data"
-    )
+    ic("No new data since last process or data failed validity check")
     if os.path.exists("data.new"):
+        ic("Removing data.new")
         os.remove("data.new")
