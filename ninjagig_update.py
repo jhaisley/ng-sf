@@ -25,11 +25,11 @@ def get_json_value(json_file, key, sub_key):
         with open(json_file, encoding="utf-8") as myfile:
             f_data = json.load(myfile)
             return f_data[key][sub_key]
-    except FileNotFoundError as err:
-        ic("Error: ", err)
+    except FileNotFoundError as file_err:
+        ic("Error: ", file_err)
         raise
-    except KeyError as err:
-        ic("Error: ", err)
+    except KeyError as key_err:
+        ic("Error: ", key_err)
         raise
 
 
@@ -49,8 +49,8 @@ def get_secret(secret_name):
     """
     try:
         return get_json_value("secrets.json", "secrets", secret_name)
-    except (FileNotFoundError, KeyError) as err:
-        ic("Error: ", err)
+    except (FileNotFoundError, KeyError) as sec_err:
+        ic("Error: ", sec_err)
         raise
 
 
@@ -66,7 +66,7 @@ try:
     response = requests.get(ngJson, timeout=15)
 except requests.exceptions.RequestException as err:
     ic("Error: ", err)
-    raise SystemExit(err)
+    raise SystemExit(err) from err
 data = response.json()
 ic("Downloaded JSON data")
 
@@ -92,6 +92,8 @@ if os.path.exists("data.json") and os.path.getsize("data.new") > os.path.getsize
     ic("Renamed data.new to data.json")
 else:
     # Remove data.new if it exists
-    ic("Data validity check failed, or no new data since last process, removing downloaded data")
+    ic(
+        "Data validity check failed, or no new data since last process, removing downloaded data"
+    )
     if os.path.exists("data.new"):
         os.remove("data.new")
