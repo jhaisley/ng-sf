@@ -199,7 +199,7 @@ else:
 if os.path.exists("data.json"):
     df = pd.read_json("data.json")
 else:
-    raise FileNotFoundError("No json file found")
+    raise SystemExit("No json file found")
 
 if last_timestamp is not None:
     df = df[df["DateReceived"] > last_timestamp]
